@@ -1,0 +1,19 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@master
+      - uses: denolib/setup-deno@master
+        with:
+            deno-version: v1.x
+
+      - run: deno -V
+
+      - run: make checkfmt
+
+      - run: make test

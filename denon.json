@@ -1,0 +1,20 @@
+{
+    "$schema": "https://deno.land/x/denon/schema.json",
+    "scripts": {
+        "start": {
+            "cmd": "run.ts",
+            "desc": "Run the example script."
+        },
+        "test": {
+            "cmd": "make test",
+            "desc": "Run tests."
+        }
+    },
+    "watcher": {
+        "interval": 350,
+        "exts": ["ts"],
+        "match": ["*.*"],
+        "skip": ["*/node_modules/*"],
+        "legacy": false
+    }
+}
